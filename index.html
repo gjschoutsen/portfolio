@@ -1,13 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio GJ</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header id="header">
+      <section id="navbar">
+        <h1>
+          <a id="logo-animation" href="#top">
+            <p id="smaller-then">&lt</p>
+            <p id="greater-then">&gt</p>
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <div class="dot"></div>
+              <a href="#about">about</a>
+            </li>
+            <li>
+              <div class="dot"></div>
+              <a href="#projects">projects</a>
+            </li>
+            <li>
+              <div class="dot"></div>
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+
+          <div id="menu-dots">
+            <div id="dot1"></div>
+            <div id="dot2"></div>
+            <div id="dot3"></div>
+          </div>
+        </nav>
+      </section>
+      <main>
+        <div class="text">
+          <p>Hello my name is</p>
+          <h1>GJ Sch<span class="letter-color">o</span>utsen</h1>
+          <p>Web Developer in Portugal</p>
+        </div>
+        <figure>
+          <img src="" alt="picture of GJ Schoutsen with moving eyes" />
+          <img src="" alt="left eye" />
+          <img src="" alt="right eye" />
+          <img src="" alt="eye background" />
+        </figure>
+        <button>Get In Touch</button>
+      </main>
+    </header>
+    <article id="about">
+      <section class="container">
+        <h2>Ab<span class="letter-color">o</span>ut</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+          risus iaculis, facilisis mauris at, vestibulum neque. Curabitur
+          imperdiet convallis massa, ac congue velit convallis vitae. In mattis
+          neque sed tortor semper, at efficitur mi bibendum. In tortor augue,
+          tempus et turpis nec, vulputate tincidunt purus. Vivamus pretium nisl
+          neque. Duis ut interdum elit. Aliquam eu dictum sem. Suspendisse a
+          erat sed libero scelerisque ultricies quis ut purus. Vestibulum ante
+          ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+          curae; Proin quis arcu pulvinar, ullamcorper lectus id, dapibus elit.
+        </p>
+      </section>
+    </article>
+    <article id="projects">
+      <section>
+        <figure>
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </figure>
+        <button>View Here</button>
+      </section>
+      <section>
+        <h2>Pr<span class="letter-color">o</span>ject 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+          risus iaculis, facilisis mauris at, vestibulum neque. Curabitur
+          imperdiet convallis massa, ac congue velit convallis vitae. In mattis
+          neque sed tortor semper, at efficitur mi bibendum
+        </p>
+      </section>
+    </article>
+    <article id="contact">
+      <section>
+        <h2>C<span class="letter-color">o</span>ntact</h2>
+        <form method="post" action="">
+          <fieldset>
+            <label for="name"
+              >Name
+              <input id="name" name="name" type="text" required />
+            </label>
+            <label for="email"
+              >Email
+              <input id="email" name="email" type="email" required />
+            </label>
+            <label for="message"
+              >Message
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Write your message here"
+                rows="4"
+              >
+              </textarea>
+            </label>
+          </fieldset>
+          <button type="submit" value="submit">Send</button>
+        </form>
+      </section>
+      <section>
+        <figure>
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </figure>
+      </section>
+    </article>
+  </body>
 </html>
