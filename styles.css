@@ -1,0 +1,140 @@
+:root {
+  --primaryDark: #0b3142;
+  --primaryLight: #eaf0ce;
+  --secondary: #0f5257;
+  --accent: #fe9000;
+  --textLight: #eaf0ce;
+  --textDark: #0b3142;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--textLight);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: none;
+  padding: 1rem 2rem;
+}
+
+body {
+  background-color: var(--primaryDark);
+}
+
+.letter-color {
+  color: var(--accent);
+}
+
+/* ---- Header and Navbar ---- */
+
+#header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+/* ---- Logo animation ---- */
+
+#logo-animation {
+  font-size: 5rem;
+  display: flex;
+  width: 300px;
+}
+
+#smaller-then {
+  position: absolute;
+}
+
+@keyframes greater-then-animation {
+  0% {
+    left: 330px;
+    transform: rotate(0rad);
+  }
+  20% {
+    left: 500px;
+    transform: rotate(3.142rad);
+  }
+  80% {
+    left: 500px;
+    transform: rotate(3.142rad);
+  }
+  100% {
+    left: 330px;
+    transform: rotate(0rad);
+  }
+}
+
+#logo-animation:hover > #smaller-then {
+  animation: greater-then-animation 3s;
+}
+
+#smaller-then {
+  animation-play-state: pause;
+}
+
+@keyframes smaller-then-animation {
+  0% {
+    transform: rotate(0rad);
+  }
+  20% {
+    transform: rotate(3.142rad);
+  }
+  80% {
+    transform: rotate(3.142rad);
+  }
+  100% {
+    transform: rotate(0rad);
+  }
+}
+
+#logo-animation:hover > #greater-then {
+  animation: smaller-then-animation 3s;
+}
+
+#greater-then {
+  animation-play-state: pause;
+}
+
+/* ---- About  ---- */
+
+#about {
+  background-color: var(--primaryLight);
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+}
+
+.container h2 {
+  color: var(--textDark);
+}
+
+.container p {
+  color: var(--textDark);
+}
