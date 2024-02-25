@@ -19,6 +19,7 @@ a {
 }
 
 button {
+  height: 5rem;
   background: none;
   border-color: var(--accent);
   outline: none;
@@ -30,18 +31,25 @@ body {
   background-color: var(--primaryDark);
 }
 
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
 .letter-color {
   color: var(--accent);
 }
 
-/* ---- Header and Navbar ---- */
-
-#header {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+/* ---- Navbar ---- */
 
 #navbar {
   position: sticky;
@@ -53,9 +61,83 @@ body {
   width: 100%;
 }
 
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ---- Header ---- */
+
+#header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 200px;
+}
+
+.text {
+  text-align: right;
+}
+
+.circle {
+  position: relative;
+  height: 220px;
+  width: 220px;
+  border: 5px solid var(--accent);
+  border-radius: 80%;
+  z-index: 5;
+}
+
+#head-img {
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  height: 180px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#left-eye {
+  position: absolute;
+  height: 30px;
+  z-index: 0;
+  left: 60px;
+  top: 77px;
+}
+
+#right-eye {
+  position: absolute;
+  height: 33px;
+  z-index: 0;
+  left: 110px;
+  top: 75px;
+}
+
+#background-eye {
+  position: absolute;
+  height: 35px;
+  width: 90px;
+  z-index: -1;
+  left: 50px;
+  top: 74px;
+}
+
 /* ---- Logo animation ---- */
 
 #logo-animation {
+  position: relative;
   font-size: 5rem;
   display: flex;
   width: 300px;
@@ -67,29 +149,25 @@ body {
 
 @keyframes greater-then-animation {
   0% {
-    left: 330px;
+    left: 0;
     transform: rotate(0rad);
   }
   20% {
-    left: 500px;
+    left: 200px;
     transform: rotate(3.142rad);
   }
   80% {
-    left: 500px;
+    left: 200px;
     transform: rotate(3.142rad);
   }
   100% {
-    left: 330px;
+    left: 0;
     transform: rotate(0rad);
   }
 }
 
 #logo-animation:hover > #smaller-then {
   animation: greater-then-animation 3s;
-}
-
-#smaller-then {
-  animation-play-state: pause;
 }
 
 @keyframes smaller-then-animation {
@@ -109,10 +187,6 @@ body {
 
 #logo-animation:hover > #greater-then {
   animation: smaller-then-animation 3s;
-}
-
-#greater-then {
-  animation-play-state: pause;
 }
 
 /* ---- About  ---- */
